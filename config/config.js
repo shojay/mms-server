@@ -1,0 +1,27 @@
+module.exports = {
+  // prod
+  environment: "dev",
+  database: {
+    dbName: "island",
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "root",
+  },
+  security: {
+    secretKey: "abcfg",
+    expiresIn: 60 * 60 * 24 * 30,
+  },
+  wx: {
+    appId: "wx95b7515fc5bb3865",
+    appSecret: "1aea655b32d14893b0d203e06e3fbb99",
+    loginUrl:
+      "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code",
+  },
+  yushu: {
+    detailUrl: "http://t.yushu.im/v2/book/id/%s",
+    keywordUrl:
+      "http://t.yushu.im/v2/book/search?q=%s&count=%s&start=%s&summary=%s",
+  },
+  host: "http://localhost:3000/",
+};
